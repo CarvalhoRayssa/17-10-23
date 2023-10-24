@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tela de Login</title>
+</head>
+<body>
+    <center>
+        <div class="container">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="username">Nome de Usuário:</label>
+                
+                <input type="text" id="username" name="username" required>
+                <br>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+                <br>
+                <button onclick="redirecionarParaProximaPagina()">Entrar</button>
+            </form>
+        </div>
+    </center>
+    <script src="script.js"></script>
+
+    <script>
+        function redirecionarParaProximaPagina() {
+            // Recupere os valores de nome de usuário e senha do formulário
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Verifique se o nome de usuário e a senha estão corretos
+            if (username === 'Rayssa44' && password === '32457318ra') {
+                // Redirecione o usuário para a próxima página
+                window.location.href = 'http://127.0.0.1:5500/TSorteio.html';
+            } else {
+                // Exiba uma mensagem de erro se as credenciais estiverem incorretas
+                alert('Credenciais incorretas. Por favor, tente novamente.');
+            }
+        }
+    </script>
+</body>
+</html>
